@@ -4,9 +4,9 @@ var exphbs = require("express-handlebars");
 var routes = require("./controllers/apiRoutes.js");
 var app = express();
 
+
 //PORT
 var PORT = process.env.PORT || 8081;
-
 
 
 // connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
