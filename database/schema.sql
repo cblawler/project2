@@ -1,16 +1,16 @@
-CREATE DATABASE gymbuddy_db;
+CREATE DATABASE tv2pdeplazyhg5ny;
 
-USE gymbuddy_db;
+USE tv2pdeplazyhg5ny;
 
 CREATE TABLE users (
 
-id INTEGER AUTO_INCREMENT NOT NULL,
+id INTEGER(60) AUTO_INCREMENT NOT NULL,
 
-user_name VARCHAR NOT NULL,
+user_name VARCHAR(60) NOT NULL,
 
-current_workout VARCHAR NOT NULL,
+current_workout VARCHAR(60) NOT NULL,
 
-gym_name VARCHAR NOT NULL,
+gym_name VARCHAR(60) NOT NULL,
 
 workout_schedule DATETIME NOT NULL, 
 
