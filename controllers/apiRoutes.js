@@ -1,8 +1,11 @@
 var express = require("express");
+var app = express();
+var path = require("path");
 
 var router = express.Router();
 
-var gymbuddy = require("../models/gymbuddy.js")
+var gymbuddy = require("../models/gymbuddy.js");
+
 
 router.get("/", function (req, res) {
     gymbuddy.getAll(function (results) {
@@ -18,8 +21,10 @@ router.get("/contact", function (req, res) {
     res.render("contact")
 });
 
-router.get("/survey", function (req, res) {
+
+router.get("/survey", function(req, res) {
     res.render("survey");
 });
 
-module.exports = router
+
+module.exports = router;

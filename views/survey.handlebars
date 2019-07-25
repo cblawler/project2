@@ -1,102 +1,121 @@
 <div class="container">
 
-    <h2>Tell us more about yourself...</h2>
-    <hr>
+  <h2>Tell us more about yourself...</h2>
+  <hr>
 
-    <h3><strong>About You</strong></h3>
-    <h4>Name (Required)</h4>
-    <input type="text" id="name" class="form-control" required>
+  <h3><strong>About You</strong></h3>
+  <h4>Name (Required)</h4>
+  <input type="text" id="name" class="form-control" required>
 
-    <h4>Link to Photo Image (Required)</h4>
-    <input type="text" id="photo" class="form-control" required>
+  <h4>Link to Photo Image (Required)</h4>
+  <input type="text" id="photo" class="form-control" required>
 
-    <hr>
+  <hr>
 
-    <h3><strong>Question 1</strong></h3>
-    <h4>What type of workouts are you interested in?</h4>
-    {{!-- <select class="chosen-select" id="q1"> --}}
-    <a class="dropdown-trigger btn" href="#" data-target="dropdown1">
-      <option value=""></option>
-      <option value="1">Lift</option>
-      <option value="2">Crossfit</option>
-      <option value="3">Run</option>
+
+
+  {{!-- Dropdown Menus are using Materialize Dropdown script--}}
+  <h3><strong>Question 1</strong></h3>
+  <h4>What type of workouts are you interested in?</h4>
+  <br>
+  {{!-- <div class="input-field col s12 m8 x16">
+    <label>Choose an option(s)</label>
+    <select name="workoutType"required multiple>
+      <option value="" disabled selected></option>
+      <option value="cardio">Cardio</option>
+      <option value="weightlifting">Weightlifting</option>
+      <option value="yoga">Yoga</option>
     </select>
-
-    <h3><strong>Question 2</strong></h3>
-    <h4>What is your skill level?</h4>
-    <select class="chosen-select" id="q2">
-      <option value=""></option>
-      <option value="1">Beginner</option>
-      <option value="2">Intermediate</option>
-      <option value="3">Advanced</option>
-    </select>
-
-
-    <h3><strong>Question 3</strong></h3>
-    <h4>How often do you workout?</h4>
-    <select class="chosen-select" id="q3">
-      <option value=""></option>
-      <option value="1">1-2 days/week</option>
-      <option value="2">3-4 days/week</option>
-      <option value="3">4-5 days/week</option>
-      <option value="4">5-7 days/week</option>
-    </select>
-
-
-    <h3><strong>Question 4</strong></h3>
-    <h4>What time of day do you like to workout?</h4>
-    <select class="chosen-select" id="q4">
-      <option value=""></option>
-      <option value="1">Early Morning (Before 8:00am)</option>
-      <option value="2">Morning (8:00am-11am)</option>
-      <option value="3">Noon (11:00am-1:00pm)</option>
-      <option value="4">Afternoon (1:00pm-4:00pm)</option>
-      <option value="5">Evening (4:00pm-8:00pm)</option>
-      <option value="6">Night (After 8:00pm)</option>
-      <option value="7">Doesn't Matter</option>
-    </select>
+  </div> --}}
+  <div>
+    <label>
+      <input id="cardio" class="with-gap" name="group3" type="radio">
+      <span>Cardio</span>
+    </label>
+  </div>
+  <div>
+    <label>
+      <input id="weightlifting" class="with-gap" name="group3" type="radio">
+      <span>Weightlifting</span>
+    </label>
+  </div>
+  <div>
+    <label>
+      <input id="yoga" class="with-gap" name="group3" type="radio">
+      <span>Yoga</span>
+    </label>
+  </div>
 
 
-    <h3><strong>Question 5</strong></h3>
-    <h4>Your gender:</h4>
-    <select class="chosen-select" id="q5">
-      <option value=""></option>
-      <option value="1">Female</option>
-      <option value="2">Male</option>
-      <option value="3">N/A</option>
-    </select>
 
 
-    <h3><strong>Question 6</strong></h3>
-    <h4>Your age:</h4>
-    <select class="chosen-select" id="q6">
-      <option value=""></option>
-      <option value="1">18 and below</option>
-      <option value="2">18-25</option>
-      <option value="3">25-30</option>
-      <option value="4">30-35</option>
-      <option value="5">35-40</option>
-      <option value="6">40-50</option>
-      <option value="7">50+</option>
-    </select>
+
+  <h3><strong>Question 2</strong></h3>
+  <h4>What is your skill level?</h4>
+  <label>Choose an option</label>
+  <select class="browser-default">
+    <option value=""></option>
+    <option value="beginner">Beginner</option>
+    <option value="intermediate">Intermediate</option>
+    <option value="advanced">Advanced</option>
+  </select>
 
 
-    <h3><strong>Question 7</strong></h3>
-    <h4>Do you have a gender preference for a workout partner?</h4>
-    <select class="chosen-select" id="q7">
-      <option value=""></option>
-      <option value="1">Male</option>
-      <option value="2">Female</option>
-      <option value="3">Doesn't Matter</option>
-    </select>
+  <h3><strong>Question 3</strong></h3>
+  <h4>What time of day do you like to workout?</h4>
+  {{!-- <label>Choose an option</label>
+  <select class="browser-default">
+    <option value=""></option>
+    <option value="morning">Morning</option>
+    <option value="day">Day</option>
+    <option value="night">Night</option>
+  </select> --}}
+  <div>
+    <label>
+      <input id="morning" class="with-gap" name="group3" type="radio">
+      <span>Morning</span>
+    </label>
+  </div>
+  <div>
+    <label>
+      <input id="afternoon" class="with-gap" name="group3" type="radio">
+      <span>Afternoon</span>
+    </label>
+  </div>
+  <div>
+    <label>
+      <input id="night" class="with-gap" name="group3" type="radio">
+      <span>Night</span>
+    </label>
+  </div>
 
 
-    <br>
-    <br>
 
-    <!-- Submit Button -->
-    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
-     Submit</button>
-    
+  <h3><strong>Question 4</strong></h3>
+  <h4>Your buddy's gender preference:</h4>
+  <label>Choose an option</label>
+  <select class="browser-default">
+    <option value=""></option>
+    <option value="morning">Morning</option>
+    <option value="day">Day</option>
+    <option value="night">Night</option>
+  </select>
 
-  </div
+
+
+  <br>
+  <br>
+
+  <!-- Submit Button -->
+  <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+      aria-hidden="true"></i>
+    Submit</button>
+
+
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('select').material_select();
+  });
+</script>
