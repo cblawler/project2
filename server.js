@@ -32,5 +32,5 @@ app.use(routes);
 //Listened app
 app.listen(PORT, function () {
     // Log (server-side) when our server has started
-    console.log("Server listening on: http://localhost:" + PORT);
+    console.log("Server listening");
 });
