@@ -1,0 +1,121 @@
+<div class="container">
+
+  <h2>Tell us more about yourself...</h2>
+  <hr>
+
+  <h3><strong>About You</strong></h3>
+  <h4>Name (Required)</h4>
+  <input type="text" id="name" class="form-control" required>
+
+  <h4>Link to Photo Image (Required)</h4>
+  <input type="text" id="photo" class="form-control" required>
+
+  <hr>
+
+
+
+  {{!-- Dropdown Menus are using Materialize Dropdown script--}}
+  <h3><strong>Question 1</strong></h3>
+  <h4>What type of workouts are you interested in?</h4>
+  <br>
+  {{!-- <div class="input-field col s12 m8 x16">
+    <label>Choose an option(s)</label>
+    <select name="workoutType"required multiple>
+      <option value="" disabled selected></option>
+      <option value="cardio">Cardio</option>
+      <option value="weightlifting">Weightlifting</option>
+      <option value="yoga">Yoga</option>
+    </select>
+  </div> --}}
+  <div>
+    <label>
+      <input id="cardio" class="with-gap" name="group3" type="radio">
+      <span>Cardio</span>
+    </label>
+  </div>
+  <div>
+    <label>
+      <input id="weightlifting" class="with-gap" name="group3" type="radio">
+      <span>Weightlifting</span>
+    </label>
+  </div>
+  <div>
+    <label>
+      <input id="yoga" class="with-gap" name="group3" type="radio">
+      <span>Yoga</span>
+    </label>
+  </div>
+
+
+
+
+
+  <h3><strong>Question 2</strong></h3>
+  <h4>What is your skill level?</h4>
+  <label>Choose an option</label>
+  <select class="browser-default">
+    <option value=""></option>
+    <option value="beginner">Beginner</option>
+    <option value="intermediate">Intermediate</option>
+    <option value="advanced">Advanced</option>
+  </select>
+
+
+  <h3><strong>Question 3</strong></h3>
+  <h4>What time of day do you like to workout?</h4>
+  {{!-- <label>Choose an option</label>
+  <select class="browser-default">
+    <option value=""></option>
+    <option value="morning">Morning</option>
+    <option value="day">Day</option>
+    <option value="night">Night</option>
+  </select> --}}
+  <div>
+    <label>
+      <input id="morning" class="with-gap" name="group3" type="radio">
+      <span>Morning</span>
+    </label>
+  </div>
+  <div>
+    <label>
+      <input id="afternoon" class="with-gap" name="group3" type="radio">
+      <span>Afternoon</span>
+    </label>
+  </div>
+  <div>
+    <label>
+      <input id="night" class="with-gap" name="group3" type="radio">
+      <span>Night</span>
+    </label>
+  </div>
+
+
+
+  <h3><strong>Question 4</strong></h3>
+  <h4>Your buddy's gender preference:</h4>
+  <label>Choose an option</label>
+  <select class="browser-default">
+    <option value=""></option>
+    <option value="morning">Morning</option>
+    <option value="day">Day</option>
+    <option value="night">Night</option>
+  </select>
+
+
+
+  <br>
+  <br>
+
+  <!-- Submit Button -->
+  <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+      aria-hidden="true"></i>
+    Submit</button>
+
+
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('select').material_select();
+  });
+</script>
