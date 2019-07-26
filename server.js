@@ -1,8 +1,10 @@
+
 //Dependencies 
 var express = require("express");
-var exphbs = require("express-handlebars");
+// var exphbs = require("express-handlebars");
 var routes = require("./controllers/apiRoutes.js");
 var app = express();
+
 
 
 //PORT
@@ -24,8 +26,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //Handlebars
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
 
 //Routes
 app.use(routes);

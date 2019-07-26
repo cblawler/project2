@@ -8,6 +8,7 @@ var gymbuddy = require("../models/gymbuddy.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function (req, res) {
+
     gymbuddy.all(function (data) {
         var hbsObject = {
             members: data
@@ -48,10 +49,24 @@ router.put("/api/members/:id", function (req, res) {
             res.status(200).end();
         }
     });
+
+    gymbuddy.getAll(function (results) {
+        // res.render("index", { gymbuddy: results });
+    })
+    //     connection.query('SELECT * FROM users', function (error, results, fields) {
+    //   if (error) throw error;
+    //   res.render("index",{gymbuddy:results});
+    // });
+    // res.render("index")
+});
+router.get("/contact", function (req, res) {
+    // res.render("contact")
+
 });
 
 router.delete("/api/members/:id", function (req, res) {
     var condition = "id = " + req.params.id;
+
 
     member.delete(condition, function (result) {
         if (result.affectedRows == 0) {
@@ -61,6 +76,10 @@ router.delete("/api/members/:id", function (req, res) {
             res.status(200).end();
         }
     });
+
+router.get("/survey", function(req, res) {
+    // res.render("survey");
+
 });
 
 // Export routes for server.js to use.
