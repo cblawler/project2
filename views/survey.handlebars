@@ -27,23 +27,25 @@
       <option value="yoga">Yoga</option>
     </select>
   </div> --}}
-  <div>
-    <label>
-      <input id="cardio" class="with-gap" name="group3" type="radio">
-      <span>Cardio</span>
-    </label>
-  </div>
-  <div>
-    <label>
-      <input id="weightlifting" class="with-gap" name="group3" type="radio">
-      <span>Weightlifting</span>
-    </label>
-  </div>
-  <div>
-    <label>
-      <input id="yoga" class="with-gap" name="group3" type="radio">
-      <span>Yoga</span>
-    </label>
+  <div class=".form-control">
+    <div>
+      <label>
+        <input id="cardio" class="chosen with-gap" name="group3" type="radio">
+        <span>Cardio</span>
+      </label>
+    </div>
+    <div>
+      <label>
+        <input id="weightlifting" class="chosen with-gap" name="group3" type="radio">
+        <span>Weightlifting</span>
+      </label>
+    </div>
+    <div>
+      <label>
+        <input id="yoga" class="chosen with-gap" name="group3" type="radio">
+        <span>Yoga</span>
+      </label>
+    </div>
   </div>
 
 
@@ -53,7 +55,7 @@
   <h3><strong>Question 2</strong></h3>
   <h4>What is your skill level?</h4>
   <label>Choose an option</label>
-  <select class="browser-default">
+  <select id="skill" class="chosen form-control browser-default">
     <option value=""></option>
     <option value="beginner">Beginner</option>
     <option value="intermediate">Intermediate</option>
@@ -70,36 +72,29 @@
     <option value="day">Day</option>
     <option value="night">Night</option>
   </select> --}}
-  <div>
-    <label>
-      <input id="morning" class="with-gap" name="group3" type="radio">
-      <span>Morning</span>
-    </label>
-  </div>
-  <div>
-    <label>
-      <input id="afternoon" class="with-gap" name="group3" type="radio">
-      <span>Afternoon</span>
-    </label>
-  </div>
-  <div>
-    <label>
-      <input id="night" class="with-gap" name="group3" type="radio">
-      <span>Night</span>
-    </label>
+  <div class="form-control">
+    <div>
+      <label>
+        <input id="morning" class="chosen with-gap" name="group3" type="radio">
+        <span>Morning</span>
+      </label>
+    </div>
+    <div>
+      <label>
+        <input id="afternoon" class="chosen with-gap" name="group3" type="radio">
+        <span>Afternoon</span>
+      </label>
+    </div>
+    <div>
+      <label>
+        <input id="night" class="chosen with-gap" name="group3" type="radio">
+        <span>Night</span>
+      </label>
+    </div>
   </div>
 
 
 
-  <h3><strong>Question 4</strong></h3>
-  <h4>Your buddy's gender preference:</h4>
-  <label>Choose an option</label>
-  <select class="browser-default">
-    <option value=""></option>
-    <option value="morning">Morning</option>
-    <option value="day">Day</option>
-    <option value="night">Night</option>
-  </select>
 
 
 
@@ -118,4 +113,57 @@
   $(document).ready(function () {
     $('select').material_select();
   });
+
+
+  var config = {
+    ".chosen": {},
+  };
+
+  for (var selector in config) {
+    $(selector).chosen(config[selector]);
+  }
+
+
+  // Capture the user inputs
+  $("#submit").on("click", function (event) {
+    event.preventDefault();
+  });
+
+  // Answer validation
+  function validateAnswers() {
+    var isValid = true;
+    $(".form-control").each(function() {
+      if ($(this).val() === "") {
+        isValid = false;
+      }
+    });
+
+    $(".chosen").each(function() {
+      if ($(this).val() === "") {
+        isValid = false;
+      }
+    });
+    return isValid;
+  }
+
+
+  // If all required fields are filled
+  if (validateAnswers()) {
+    var userData = {
+      name: $("#name").val(),
+      photo: $("#photo").val(),
+      answers: [
+      $("#cardio").val();
+      $("#weightlifting").val();
+      $("#yoga").val();
+      $("#beginner").val();
+      $("#intermediate").val();
+      $("#advanced").val();
+      $("#morning").val();
+      $("#day").val();
+      $("#night").val();
+      ]
+    }
+  };
+
 </script>

@@ -3,6 +3,7 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var routes = require("./controllers/apiRoutes.js");
 var app = express();
+var orm = require("./config/orm.js");
 
 
 //PORT
@@ -34,3 +35,10 @@ app.listen(PORT, function () {
     // Log (server-side) when our server has started
     console.log("Server listening");
 });
+
+
+
+
+/////////////////////// ORM /////////////////////////////////////////
+
+orm.getAll("members");
