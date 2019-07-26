@@ -1,3 +1,7 @@
+$(document).ready(function(){
+  $('select').formSelect();
+
+     
 (function($){
   $(function(){
 
@@ -6,3 +10,4 @@
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
+ });
