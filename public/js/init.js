@@ -19,5 +19,5 @@ $(document).ready(function(){
 // cardio:
 // strength:
 // yoga:
-
+// nothing else is in the DBs
 // return as a collection and loop through the collection
