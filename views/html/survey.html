@@ -47,45 +47,59 @@
       <div class="container">
         <br></br>
         <div class="input-field col s6">
-                <select multiple>
-                  <option value="" disabled selected>What type of workouts are you interested in?(select all that apply)</option>
-                  <option value="1">Cardio</option>
-                  <option value="2">Weightlifting</option>
-                  <option value="3">Yoga</option>
+                <select multiple id="workout">
+                  <option id="skip" value="skip" disabled selected>What type of workouts are you interested in?(select all that apply)</option>
+                  <option id="cardio" value="cardio">Cardio </option>
+                  <option id="strength" value="strength">Strength</option>
+                  <option id="yoga" value="yoga">Yoga</option>
+                  <!-- <option id="running" value="running">Running</option>
+                  <option id="swimming" value="swimming">Swimming</option>
+                  <option id="group" value="group">Group Classes</option> -->
                 </select>
               </div> 
               <br></br>
               <div class="input-field col s6">
                       <select >
-                        <option value="" disabled selected>What is your skill level?</option>
-                        <option value="1">Beginner</option>
-                        <option value="2">Intermediate</option>
-                        <option value="3">Advanced</option>
+                        <option id="skip" value="skip" disabled selected>What is your skill level?</option>
+                        <option id="beginner" value="beginner">Beginner</option>
+                        <option id="intermediate" value="intermediate">Intermediate</option>
+                        <option id="advanced" value="advanced">Advanced</option>
                       </select>
                     </div> 
                     <br></br>
               <div class="input-field col s6">
-                      <select multiple>
-                        <option value="" disabled selected>What time of day do you like to workout?</option>
-                        <option value="1">Morning</option>
-                        <option value="2">Daytime</option>
-                        <option value="3">Evening</option>
+                      <select multiple id="workoutTime">
+                        <option id="skip" value="skip" disabled selected>What time of day do you like to workout?</option>
+                        <option id="morning" value="morning">Morning</option>
+                        <option id="midday" value="midday">Mid Day</option>
+                        <option id="evening" value="evening">Evening</option>
                       </select>
                     </div> 
                     <br></br>
-              <div class="input-field col s6">
-                      <select multiple>
-                        <option value="" disabled selected>Select Your Gyms</option>
-                        <option value="1">24 Hour Fitness</option>
-                        <option value="2">LA Fitness</option>
-                        <option value="3">Equinox</option>
-                        <option value="4">Crossfit</option>
-                        <option value="5">Corepower Yoga</option>
-                        <option value="6">Orange Theory</option>
-                        <option value="7">Planet Fitness</option>
-                        <option value="8">Life Time</option>
+                    <!-- <div class="input-field col s6">
+                      <select id="workoutLength">
+                        <option id="skip" value="skip" disabled selected>What is your desired workout length?</option>
+                        <option id="short" value="short">Short (under 30 minutes)</option>
+                        <option id="medium" value="medium">Medium (30 minutes to 1 hour </option>
+                        <option id="long" value="long">Long (1 hour to 2 hours) </option>
+                        <option id="extended" value="extended">Extended (More than 2 hours) </option>
                       </select>
                     </div> 
+                    <br></br> -->
+              <!-- <div class="input-field col s6" id="gym">
+                      <select multiple>
+                        <option id="skip" value="skip" disabled selected>Select Your Gyms</option>
+                        <option id="24" value="24">24 Hour Fitness</option>
+                        <option id="lafitness" value="lafitness">LA Fitness</option>
+                        <option id="equinox" value="equinox">Equinox</option>
+                        <option id="crossfit" value="crossfit">Crossfit</option>
+                        <option id="corepower" value="corepower">Corepower Yoga</option>
+                        <option id="orangeTheory" value="orangeTheory">Orange Theory</option>
+                        <option id="planetFitness" value="planetFitness">Planet Fitness</option>
+                        <option id="lifetime" value="lifetime">Life Time</option>
+                        <option id="none" value="none">No Gym/Outdoors</option>
+                      </select>
+                    </div>  -->
                     
       </div>
                 <br></br>
@@ -100,7 +114,7 @@
               </div>
             </div>
           </footer>
-
+  
 
 
 
