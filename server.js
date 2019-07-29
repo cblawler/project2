@@ -18,6 +18,7 @@ app.use(express.static("public"));
 var routes = require("./controllers/apiRoutes.js");
 app.use(routes);
 
+//this is here because the sample code was built for handlebars
 app.get("/survey", function (req, res) {
     res.sendFile(path.join(__dirname + "/views/html/survey.html"));
 });
