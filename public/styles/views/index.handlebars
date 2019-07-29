@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <tr>
+            <th>Gym Buddy</th>
+            <th>Preferred Workout</th>
+            <th>Gym Name</th>
+            <th>Workout Schedule</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each gymbuddy}}
+        <tr>
+            <td>{{user_name}}</td>
+            <td>{{current_workout}}</td>
+            <td>{{gym_name}}</td>
+            <td>{{workout_schedule}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
