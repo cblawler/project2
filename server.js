@@ -30,6 +30,7 @@ app.use(express.static("public"));
 // app.set("view engine", "handlebars");
 
 //Routes
+var routes = ("./controllers/apiRoutes.js");
 app.use(routes);
 //Listened app
 app.listen(PORT, function () {
