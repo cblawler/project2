@@ -2,7 +2,9 @@
 
 $(document).ready(function(){
   $('select').formSelect();
-
+  $('#download-button').click(function () {
+    $('#modal1').show()
+  });
      
 (function($){
   $(function(){
