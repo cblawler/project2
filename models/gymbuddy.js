@@ -1,10 +1,16 @@
 var orm = require("../config/orm.js")
 
-var gymbuddy = {
-    getAll: function (cb) {
-        orm.getAll("users", function (results) {
-            cb(results)
-        })
-    }
-}
-module.exports = gymbuddy;
+// var gymbuddy = {
+//     all: function(tableName, cb) {
+//         var queryString = "SELECT * FROM " + tableName;
+
+//         connection.query(queryString, function (err, result) {
+//             if (err) {
+//                 throw err;
+//             }
+//             cb (result);
+//         })
+//     }
+// };
+
+// module.exports = gymbuddy;

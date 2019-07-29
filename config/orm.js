@@ -1,18 +1,23 @@
-var connection = require("./connection.js")
+var connection = require("./connection.js");
+
+
+function printQuestionMarks(num) {
+    var arr =[];
+
+    for (var i=0; i < num; i++) {
+        arr.push("?");
+    }
+
+    return arr.toString();
+};
+
+
 
 var orm = {
-    // getAll: function (tableName, cb) {
-    //     connection.query('SELECT * FROM ' + tableName, function (error, results, fields) {
-    //         if (error) throw error;
-    //         cb(results);
-    //     });
-    // },
-    getAll: function(tableName) {
-        var queryString = "SELECT * FROM ??";
-
-        connection.query(queryString, [tableName], function (err, result) {
-            if (err) throw err;
-            console.log(result);
+    all: function (cb) {
+        connection.query("SELECT * FROM members", function (error, results) {
+            if (error) throw error;
+            cb(results);
         });
     },
     create: function(table, cols, vals, cb) {
@@ -22,7 +27,17 @@ var orm = {
         queryString += cols.toString();
         queryString += ") ";
         queryString += "VALUES (";
-        queryString += 
+        queryString += printQuestionMarks(vals.length);
+        queryString += ") ";
+
+        console.log(queryString);
+
+        connection.query(queryString, vals, function(err, result) {
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        });
     }
 };
 
