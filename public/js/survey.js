@@ -18,8 +18,8 @@ $(document).ready(function(){
         
         var test_data=[
             {"name":"Mary Martin","workouts":["Yoga"],"times":["morning"]},
-            {"name":"Mike Michaels","workouts":["Yoga","Strength"],"times":["morning","evening"]},
-            {"name":"Brett Cordes","workouts":["Strength"],"times":["evening"]}        
+            {"name":"Mike Michaels","workouts":["Yoga","Strength"],"times":["morning","night"]},
+            {"name":"Brett Cordes","workouts":["Strength"],"times":["night"]}        
         ]
         build_friend_list(test_data)
         
