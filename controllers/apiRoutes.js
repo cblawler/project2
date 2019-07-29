@@ -81,10 +81,11 @@ router.get("/survey", function(req, res) {
     // res.render("survey");
 
 });
+});
 
 // Export routes for server.js to use.
 module.exports = router;
-})
+
 
 // THE FOLLOWING IS PREVIOUS CODE
 // router.get("/", function (req, res) {
