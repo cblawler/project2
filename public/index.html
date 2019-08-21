@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="styles/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="styles/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
 </head>
 
 <body>
@@ -83,7 +84,52 @@
           <h5 class="header col s12 dark">Let us help you find today's workout partner.</h5>
         </div>
         <div class="row center">
-          <a href="#" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+          <!-- <a href="#" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a> -->
+          
+      <!-- Modal Trigger -->
+      <button data-target="modal1" class="btn modal-trigger">Get Started</button>
+
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Sign-Up</h4>
+
+          <!-- First & Last Name Inputs -->
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+
+          <!-- Email Input -->
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+
+          <!-- Password Input -->
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
+          </div>
+
+
+          <!-- Submit -->
+          <div class="modal-footer">
+            <a id="login" href="#!" class="modal-close waves-effect waves-green btn-flat">Sign-Up</a>
+          </div>
+        </div>
+      </div>
+
         </div>
         <br><br>
 
@@ -101,7 +147,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up Progress</h5>
+            <h5 id="highlight" class="center">Speeds up Progress</h5>
 
             <p class="light">"Exercise partners provide a powerful combination of support, accountability, motivation
               and, in some cases, healthy competition. “They can play the role of teammate, co-coach and cheerleader —
@@ -113,7 +159,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">Customized Matching</h5>
+            <h5 id="highlight" class="center">Customized Matching</h5>
 
             <p class="light">If you choose someone who does not share a similar commitment to fitness, that can be a
               distraction or even a deterrent. And if your partner is at a radically different level of health, fitness
@@ -127,7 +173,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Why it Works</h5>
+            <h5 id="highlight" class="center">Why it Works</h5>
 
             <p class="light">“Having a reliable workout buddy increases your chances of sticking with your program,”
               says Elizabeth Lombardo, PhD, MS, PT, psychologist, physical therapist and author of A Happy You: Your
@@ -191,32 +237,14 @@
   <footer class="page-footer teal">
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
+        <div class="col l12 s12">
           <h5 class="white-text">Company Bio</h5>
           <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our
-            full time job. Any amount would help support and continue development on this project and is greatly
-            appreciated.</p>
+            full time job. </p>
 
 
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
+
       </div>
     </div>
     <div class="footer-copyright">

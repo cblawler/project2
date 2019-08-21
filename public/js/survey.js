@@ -41,12 +41,14 @@ $(document).ready(function(){
 
     function build_friend_list(friends){
         var newdiv, divdata, parentDiv=document.getElementById("survey_results");
+        
         friends.forEach(function(ele){
             divdata="";
             var newdiv = document.createElement("div");
-            divdata+="<h2>"+ele.name+"</h2>"
-            divdata+="<div style='margin:5px;font-size:20px;'>Workout Types: "+ele.workouts.join(", ")+"</div>";
-            divdata+="<div style='margin:5px;font-size:20px;'>Workout Times: "+ele.times.join(", ")+"</div>";
+            divdata+="<h5 id='matches'>Choose a Gym Buddy:</h5>";
+            divdata+="<h4>"+ele.name+"</h4>"
+            divdata+="<div style='margin:5px;font-size:20px;'>Likes to do: "+ele.workouts.join(", ")+"</div>";
+            divdata+="<div style='margin:5px;font-size:20px;'>Likes to workout in the: "+ele.times.join(", ")+"</div>";
             newdiv.innerHTML=divdata
             parentDiv.appendChild(newdiv);
         });

@@ -68,6 +68,9 @@ app.get("/api/members", function (req, res) {
     });
 });
 
+app.post("/api/findmybuddy",function(req,res){
+    
+});
 
 /****************** POSTING NEW MEMBER ***************/
 app.post("/signup", function (req, res) {

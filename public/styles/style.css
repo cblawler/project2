@@ -7,6 +7,17 @@ p {
   line-height: 2rem;
 }
 
+#modal1 {
+  color: black;
+}
+
+
+#login {
+  color: black;
+}
+
+
+
 .sidenav-trigger {
   color: #26a69a;
 }
@@ -61,3 +72,14 @@ h5 {
 
 }
 
+#highlight {
+  color: #444;
+  text-shadow: none;
+}
+
+
+#matches {
+  color: teal;
+  text-shadow: none;
+
+}
