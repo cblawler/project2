@@ -76,12 +76,12 @@ router.delete("/api/members/:id", function (req, res) {
             res.status(200).end();
         }
     });
-
-router.get("/survey", function(req, res) {
-    // res.render("survey");
-
 });
-});
+
+// router.get("/survey", function (req, res) {
+//     // res.render("survey");
+//     res.sendFile(path.join(__dirname + "/views/html/survey.html"));
+// });
 
 // Export routes for server.js to use.
 module.exports = router;
